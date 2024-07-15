@@ -12,5 +12,5 @@
 **Ponto Extra:** Trazer um botão que mude o tema automaticamente
 
 
-Alterar de ``dark`` para `light`` no arquivo ``index.html`` (linha 10) para visualizar a alteração de tema: 
+Alterar de ``dark`` para `light`` no arquivo  ``index.html`` (linha 10) para visualizar a alteração de tema: 
 <div class="theme-dark">

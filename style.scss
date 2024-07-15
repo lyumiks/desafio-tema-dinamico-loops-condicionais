@@ -1,0 +1,46 @@
+@use "sass:list";
+
+$theme-colors: (
+  dark: (
+    primary: #14213d,
+    secondary: beige,
+  ),
+  light: (
+    primary: white,
+    secondary: black,
+  ),
+);
+
+$theme-name: theme-light, theme-dark;
+
+$tipo-de-cor: primary, secondary;
+
+@function themecolor($theme-name, $tipo-de-cor) {
+  @return map-get($theme-colors, $theme-name, $tipo-de-cor);
+}
+
+@mixin generate-theme($theme-name: true) {
+  @if $theme-name == "theme-light" {
+    color: themecolor(light, secondary);
+    background-color: themecolor(light, primary);
+  } @else if $theme-name == "theme-dark" {
+    color: themecolor(dark, secondary);
+    background-color: themecolor(dark, primary);
+  }
+}
+
+@for $index from 1 through 2 {
+  .#{list.nth($theme-name, $index)} {
+    @include generate-theme(list.nth($theme-name, $index));
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  height: 100vh;
+}

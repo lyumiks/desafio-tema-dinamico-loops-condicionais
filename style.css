@@ -1,0 +1,19 @@
+.theme-light {
+  color: black;
+  background-color: white;
+}
+
+.theme-dark {
+  color: beige;
+  background-color: #14213d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  height: 100vh;
+}/*# sourceMappingURL=style.css.map */
